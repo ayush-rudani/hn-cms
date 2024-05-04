@@ -16,7 +16,7 @@ import {
 import ExternalLinkSVG from '../../components/icons/svgs/ExternalLinkSVG';
 import { createHeaders, createSSRExchange, getUrqlClientConfig } from '../../lib/api/client';
 import PublicationPosts from '../../components/publication-posts';
-import PublicationFooter from '../../components/publication-footer';
+// import PublicationFooter from '../../components/publication-footer';
 
 const INITIAL_LIMIT = 6;
 
@@ -103,15 +103,6 @@ export default function Post({ publication, posts, tag, slug, currentMenuId }: P
 						fetching={fetching}
 					/>{' '}
 				</div>
-				<PublicationFooter
-					authorName={publication.author.name}
-					title={publication.title}
-					imprint={publication.imprint}
-					disableFooterBranding={publication.preferences.disableFooterBranding}
-					isTeam={publication.isTeam}
-					logo={publication.preferences.logo}
-					darkMode={publication.preferences.darkMode}
-				/>
 			</Layout>
 		</AppProvider>
 	);

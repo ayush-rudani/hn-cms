@@ -22,7 +22,7 @@ import { createHeaders, createSSRExchange, getUrqlClientConfig } from '../lib/ap
 
 import FeaturedPosts from '../components/features-posts';
 
-import PublicationFooter from '../components/publication-footer';
+// import PublicationFooter from '../components/publication-footer';
 import PublicationMeta from '../components/publication-meta';
 import { resizeImage } from '../utils/image';
 
@@ -180,17 +180,6 @@ export default function Index(
 						/>
 					) : null}
 				</div>
-				{publication ? (
-					<PublicationFooter
-						authorName={publication.author.name}
-						title={publication.title}
-						imprint={publication.imprint}
-						disableFooterBranding={publication.preferences.disableFooterBranding}
-						isTeam={publication.isTeam}
-						logo={publication.preferences.logo}
-						darkMode={publication.preferences.darkMode}
-					/>
-				) : null}
 			</Layout>
 		</AppProvider>
 	);

@@ -15,7 +15,7 @@ import { Header } from '../components/header';
 import { Layout } from '../components/layout';
 import { PostHeader } from '../components/post-header';
 import PostPageNavbar from '../components/post-page-navbar';
-import PublicationFooter from '../components/publication-footer';
+// import PublicationFooter from '../components/publication-footer';
 import StaticPageContent from '../components/static-page-content';
 import {
 	MorePostsByPublicationDocument,
@@ -130,15 +130,6 @@ export default function PostOrPage(props: Props) {
 							<Post {...props} />
 						</article>
 					</Container>
-					<PublicationFooter
-						authorName={publication.author.name}
-						title={publication.title}
-						imprint={publication.imprint}
-						disableFooterBranding={publication.preferences.disableFooterBranding}
-						isTeam={publication.isTeam}
-						logo={publication.preferences.logo}
-						darkMode={publication.preferences.darkMode}
-					/>
 				</Layout>
 			</AppProvider>
 		);
@@ -182,15 +173,6 @@ export default function PostOrPage(props: Props) {
 						<Page {...props} />
 					</article>
 				</Container>
-				<PublicationFooter
-					authorName={publication.author.name}
-					title={publication.title}
-					imprint={publication.imprint}
-					disableFooterBranding={publication.preferences.disableFooterBranding}
-					isTeam={publication.isTeam}
-					logo={publication.preferences.logo}
-					darkMode={publication.preferences.darkMode}
-				/>
 			</Layout>
 		</AppProvider>
 	);

@@ -8,7 +8,7 @@ import { useQuery } from 'urql';
 import { AppProvider } from '../../components/contexts/appContext';
 import { Header } from '../../components/header';
 import { Layout } from '../../components/layout';
-import PublicationFooter from '../../components/publication-footer';
+// import PublicationFooter from '../../components/publication-footer';
 import PublicationPosts from '../../components/publication-posts';
 import {
 	PublicationFragment,
@@ -145,15 +145,6 @@ export default function Series({
 						/>
 					</div>
 				</div>
-				<PublicationFooter
-					authorName={publication.author.name}
-					title={publication.title}
-					imprint={publication.imprint}
-					disableFooterBranding={publication.preferences.disableFooterBranding}
-					isTeam={publication.isTeam}
-					logo={publication.preferences.logo}
-					darkMode={publication.preferences.darkMode}
-				/>
 			</Layout>
 		</AppProvider>
 	);

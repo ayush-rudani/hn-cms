@@ -15,7 +15,7 @@ import { GetServerSideProps, InferGetServerSidePropsType } from 'next';
 import { log as _log } from 'next-axiom';
 import { initUrqlClient } from 'next-urql';
 import { Header } from '../components/header';
-import PublicationFooter from '../components/publication-footer';
+// import PublicationFooter from '../components/publication-footer';
 
 type Props = {
   publication: PublicationFragment;
@@ -72,17 +72,6 @@ const Newsletter = (props: Props) => {
           </>
         )}
       </div>
-      {publication ? (
-				<PublicationFooter
-					authorName={publication.author.name}
-					title={publication.title}
-					imprint={publication.imprint}
-					disableFooterBranding={publication.preferences.disableFooterBranding}
-					isTeam={publication.isTeam}
-					logo={publication.preferences.logo}
-					darkMode={publication.preferences.darkMode}
-				/>
-				) : null}
     </AppProvider>
   );
 };
